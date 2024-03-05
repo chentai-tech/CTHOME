@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>維修物件簡介</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="#" onclick="changeImage(0)">維修物件1</a>
+		<a href="#" onclick="changeImage(1)">維修物件2</a>
+		<a href="#" onclick="changeImage(2)">維修物件3</a>
+		<a href="#" onclick="changeImage(3)">維修物件4</a>
+		<a href="#" onclick="changeImage(4)">Heat Exchanger</a>
+		<a href="index.html">首頁</a>
+	</div>
+	<img id="image" src="" alt="影像">
+	
+<script>
+	const images = [
+      "img/obj1.png",
+      "img/obj2.png",
+      "img/obj3.png",
+	  "img/obj4.png",
+	  "img/heater.png",
+    ];
+
+    const imageElement = document.getElementById("image");
+
+    function changeImage(index) {
+      imageElement.src = images[index];
+	  console.log(images[index]);
+    }
+
+    // 設定初始影像
+    changeImage(0);
+</script>
+</body>
